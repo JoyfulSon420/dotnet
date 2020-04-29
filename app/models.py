@@ -106,3 +106,14 @@ class NewsCategory(Model):
     __tablename__ = 'news_category'
     id = Column(Integer, primary_key=True)
     name = Column(String(50), nullable=False)
+    
+class Video(Model):
+    __tablename__ = 'video'
+    id = Column(Integer, primary_key=True)
+    title = Column(String(50), nullable=False)
+    url = Column(String(50000), nullable=False)
+
+class Promotion(Model):
+    __tablename__ = 'promotion'
+    id = Column(Integer, primary_key=True)
+    title = Column(String(50), nullable=False)

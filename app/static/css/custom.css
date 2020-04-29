@@ -4,10 +4,85 @@ li.tight {
 }
 
 .navbar-inverse {
-    background-color: crimson;
-    border-color: crimson;
+    background-color: white;
+    border-color: white;
 }
 
 .navbar-brand a{
-    color: #FFFFFF;
+    color: #000;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #000;
+}
+
+.jumbotron {
+
+    background: #7014e8;
+        background-image: none;
+    background-image: url("https://dotnet.microsoft.com/static/images/redesign/home-hero-bg.svg"),linear-gradient(180deg,#7014e8 30.12%,#0e5ecf 192.47%);
+    margin: 0;
+    padding: 0;
+
+}
+
+.jumbotron {
+
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    background-color: #e9ecef;
+    border-radius: 0;
+
+}
+
+
+.jumbotron .container .btn {
+
+    margin: 0 0 10px;
+    min-width: 180px;
+
+}
+.btn-white {
+
+    color: #512bd4;
+    background-color: #fff;
+    border-color: transparent;
+    font-family: "Segoe UI Semibold","Segoe UI",Helvetica,Arial,sans-serif;
+
+}
+
+.btn-lg, .btn-group-lg > .btn {
+
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+}
+
+.btn-purple {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    font-family: "Segoe UI Semibold","Segoe UI",Helvetica,Arial,sans-serif;
+}
+
+.btn {
+
+    display: inline-block;
+    width: auto;
+    
+
+}
+
+
+.home .tagline.typing {
+    border-right: 2px solid #fff;
+    animation: caret 1s steps(1) infinite;
+    padding-right: 5px;
+}
+
+.home .tagline {
+    display: inline-block;
 }

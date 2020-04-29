@@ -78,12 +78,55 @@ class NewsPageView(BaseView):
         self.update_redirect()
         return self.render_template('news.html', param1=param1)
 
+    @expose('/entertainment_news/')
+    def entertainment_news(self):
+        param1 = 'Entertainment News'
+        self.update_redirect()
+        return self.render_template('news.html', param1=param1)
+        
 
+class Video(BaseView):
+    default_view = 'video'
+
+    @expose('/video/')
+    def video(self):
+        param1 = 'Video'
+        self.update_redirect()
+        return self.render_template('news.html', param1 = param1)
+        
+    @expose('/testing/')
+    def testing(self):
+        param1 = 'Testing'
+        self.update_redirect()
+        return self.render_template('news.html', param1 = param1)
+        
+class Promotion(BaseView):
+    default_view = 'promotion'
+
+    @expose('/promotion/')
+    def promotion(self):
+        param1 = 'Promotion'
+        self.update_redirect()
+        return self.render_template('news.html', param1 = param1)
+        
+    @expose('/testing/')
+    def testing(self):
+        param1 = 'Testing'
+        self.update_redirect()
+        return self.render_template('news.html', param1 = param1)
+    
 db.create_all()
 
 """ Page View """
 appbuilder.add_view(NewsPageView, 'Local News', category="News")
 appbuilder.add_link("Global News", href="/newspageview/global_news/", category="News")
+appbuilder.add_link("Entertainment News", href="/newspageview/entertainment_news/", category="News")
+
+appbuilder.add_view(Video, "Video", category="Video")
+appbuilder.add_link("Testing", href="/video/testing/", category="Video")
+
+appbuilder.add_view(Promotion, "Promotion", category="Promotion")
+appbuilder.add_link("Testing", href="/promotion/testing/", category="Promotion")
 
 """ Custom Views """
 appbuilder.add_view(MenuItemView, "MenuItem", icon="fa-folder-open-o", category="Admin")
